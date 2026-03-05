@@ -37,19 +37,25 @@
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #fcfcfc; color: #333; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
         
-        .avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .name { font-size: 22px; font-weight: 700; margin-bottom: 5px; text-align: center; text-transform: uppercase; }
-        .niche { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid #fff; }
+        .name { font-size: 24px; font-weight: 800; margin-bottom: 5px; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
+        .niche { font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; text-align: center; }
         
-        /* Блок иконок соцсетей */
-        .social-row { display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; }
-        .social-icon { color: #444; width: 28px; height: 28px; transition: color 0.2s ease, transform 0.2s ease; display: block; }
-        .social-icon:hover { color: #000; transform: scale(1.1); }
+        /* Расширенный блок "Обо мне" */
+        .bio-box { width: 100%; max-width: 400px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 25px; font-size: 14px; line-height: 1.6; text-align: center; border: 1px solid #eee; box-sizing: border-box; }
+        .bio-box p { margin: 0 0 10px 0; }
+        .bio-box p:last-child { margin: 0; }
+        .highlight { color: #d64024; font-weight: bold; }
 
         .links-container { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 12px; }
         
+        /* Кнопки */
         .btn { display: block; background-color: #fff; color: #333; text-align: center; padding: 16px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.02); transition: all 0.2s ease; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        
+        .btn-price { background-color: #333; color: #fff; border-color: #222; font-size: 16px; }
+        .btn-price:hover { background-color: #000; }
+        
         .btn-tg { background-color: #eaf4ff; border-color: #cce4ff; color: #0088cc; }
         .btn-wa { background-color: #e8f9ee; border-color: #c4f0d5; color: #25D366; }
         
@@ -61,10 +67,15 @@
         .cases-content { padding: 15px; display: flex; flex-direction: column; gap: 10px; background-color: #fafafa; }
         .btn-case-item { display: block; padding: 12px; background: #fff; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: #444; font-size: 14px; line-height: 1.4; transition: border-color 0.2s; }
         .btn-case-item:hover { border-color: #aaa; }
-        .btn-all-cases { display: block; padding: 12px; background: #333; color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 5px; }
+        .btn-all-cases { display: block; padding: 12px; background: #f0f0f0; color: #333; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 5px; }
+
+        /* Футер и стильные кнопки соцсетей */
+        .footer-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 40px; margin-bottom: 20px; max-width: 400px; }
+        .social-pill { padding: 10px 18px; background: #f0f0f0; color: #555; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s ease; border: 1px solid #e0e0e0; }
+        .social-pill:hover { background: #e0e0e0; color: #000; transform: translateY(-1px); }
 
         /* Всплывающее окно (Политика) */
-        .policy-link { margin-top: 30px; font-size: 12px; color: #999; cursor: pointer; text-decoration: underline; }
+        .policy-link { font-size: 12px; color: #aaa; cursor: pointer; text-decoration: underline; margin-bottom: 20px; }
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
         .modal-content { background: #fff; padding: 30px; border-radius: 12px; max-width: 500px; max-height: 80vh; overflow-y: auto; position: relative; font-size: 14px; line-height: 1.5; color: #444; }
         .close-btn { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #888; }
@@ -73,54 +84,38 @@
 </head>
 <body>
 
-    <!-- ФОТО -->
+    <!-- ФОТО И ЗАГОЛОВОК -->
     <img src="140.jpg" alt="Татьяна Новикова" class="avatar">
-    
     <div class="name">ТАТЬЯНА НОВИКОВА</div>
-    <div class="niche">Таргетолог для бьюти-ниши</div>
+    <div class="niche">Специалист по таргетированной рекламе<br>для бьюти-бизнеса</div>
 
-    <!-- ИКОНКИ СОЦСЕТЕЙ В РЯД -->
-    <div class="social-row">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/ads_target_pr/" target="_blank" class="social-icon">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5Z" /></svg>
-        </a>
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@tatyana.ads" target="_blank" class="social-icon">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.66-.4 3.35-1.28 4.75-1.29 2.06-3.64 3.31-6.14 3.33-2.52.02-4.99-1.21-6.32-3.23-1.39-2.12-1.52-4.96-.28-7.18 1.25-2.22 3.65-3.56 6.18-3.58v4.06c-1.56.02-3.11.96-3.83 2.37-.73 1.45-.63 3.29.28 4.64.91 1.35 2.58 2.08 4.2 1.94 1.58-.13 3.03-1.04 3.8-2.43.76-1.38 1.05-3.05 1.05-4.66V0h-1.74z"/></svg>
-        </a>
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/newadstarget" target="_blank" class="social-icon">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
-        </a>
-        <!-- Threads -->
-        <a href="https://www.threads.com/@ads_target_pr?hl=ru" target="_blank" class="social-icon">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M14.65,12.75C14.47,13.81 13.84,14.61 12.79,15.13C12,15.5 11.08,15.7 10.12,15.7C8.16,15.7 6.64,15.08 5.56,13.83C4.47,12.58 3.93,10.87 3.93,8.7C3.93,6.5 4.5,4.78 5.64,3.54C6.77,2.29 8.35,1.67 10.36,1.67C12.44,1.67 14,2.33 15.14,3.65C16.27,4.97 16.84,6.77 16.84,9V9.75H6.38C6.44,11.24 6.84,12.37 7.57,13.15C8.3,13.92 9.25,14.31 10.42,14.31C11.18,14.31 11.83,14.16 12.38,13.86C12.92,13.56 13.31,13.04 13.56,12.3H14.65M6.43,8.44H14.39C14.33,7.21 14,6.23 13.43,5.5C12.86,4.77 11.96,4.4 10.74,4.4C9.5,4.4 8.5,4.77 7.74,5.5C6.97,6.23 6.54,7.21 6.43,8.44M11.5,0A11.5,11.5 0 0,1 23,11.5A11.5,11.5 0 0,1 11.5,23C8.65,23 6.06,21.96 4,20.25L5,19C6.83,20.5 9.07,21.36 11.5,21.36A9.86,9.86 0 0,0 21.36,11.5A9.86,9.86 0 0,0 11.5,1.64A9.86,9.86 0 0,0 1.64,11.5C1.64,14 2.54,16.27 4.04,18H5.66C4.42,16.47 3.68,14.57 3.68,12.5A7.82,7.82 0 0,1 11.5,4.68A7.82,7.82 0 0,1 19.32,12.5A7.82,7.82 0 0,1 11.5,20.32C10.05,20.32 8.7,19.92 7.5,19.23L6.68,20.66C8.08,21.5 9.73,22 11.5,22A10.5,10.5 0 0,0 22,11.5A10.5,10.5 0 0,0 11.5,1A10.5,10.5 0 0,0 1,11.5C1,13.9 1.83,16.12 3.2,17.89L2.24,19.06C0.83,17.13 0,14.71 0,11.5A11.5,11.5 0 0,1 11.5,0Z" /></svg>
-        </a>
-        <!-- YouTube (Заглушка) -->
-        <a href="#" target="_blank" class="social-icon">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.58,7.19C21.35,6.33 20.67,5.65 19.81,5.42C18.25,5 12,5 12,5C12,5 5.75,5 4.19,5.42C3.33,5.65 2.65,6.33 2.42,7.19C2,8.75 2,12 2,12C2,12 2,15.25 2.42,16.81C2.65,17.67 3.33,18.35 4.19,18.58C5.75,19 12,19 12,19C12,19 18.25,19 19.81,18.58C20.67,18.35 21.35,17.67 21.58,16.81C22,15.25 22,12 22,12C22,12 22,8.75 21.58,7.19M10,15V9L15.2,12L10,15Z" /></svg>
-        </a>
+    <!-- ПОДРОБНОЕ ОПИСАНИЕ -->
+    <div class="bio-box">
+        <p>Реклама, которая приносит клиентов — даже новым салонам без подписчиков.</p>
+        <p>С 2018 года я настраиваю рекламу в Meta Ads для beauty ниши. За это время успешно реализовала <b>более 50 проектов</b> в США, Канаде и Европе.</p>
+        <p><span class="highlight">Подготовка к запуску бесплатная</span> — вы оплачиваете только активное привлечение клиентов.</p>
     </div>
 
     <div class="links-container">
         
+        <!-- НОВАЯ КНОПКА ПРАЙС-ЛИСТА -->
+        <a href="prices.html" class="btn btn-price">Услуги и цены (Прайс-лист)</a>
+        
         <!-- РАСКРЫВАЮЩИЙСЯ СПИСОК КЕЙСОВ -->
         <details>
-            <summary>🏆 Открыть лучшие кейсы</summary>
+            <summary>Открыть лучшие кейсы</summary>
             <div class="cases-content">
                 <a href="https://adsnew.org/2026/03/04/keys-prodvizhenie-parikmaherskoj-v-ssha-meta-ads/" target="_blank" class="btn-case-item">
-                    $15450 Доход новой парикмахерской США за три месяца
+                    <b>🇺🇸 США:</b> $15 450 выручки для новой парикмахерской
                 </a>
                 <a href="https://adsnew.org/2026/02/15/case-massage-israel-target/" target="_blank" class="btn-case-item">
-                    $10000 чистого дохода для нового СПА салона
+                    <b>🇮🇱 Израиль:</b> $9 946 чистой прибыли для начинающего мастера массажа
                 </a>
                 <a href="https://adsnew.org/2026/01/06/keis-salon-krasoty-illinois-794-obrashcheniya-160-klientov/" target="_blank" class="btn-case-item">
-                    160 клиентов для нового салона красоты в Иллинойсе
+                    <b>🇺🇸 Иллинойс:</b> 160 клиентов для нового салона красоты
                 </a>
                 
-                <!-- КНОПКА "ПОСМОТРЕТЬ ВСЕ КЕЙСЫ" -->
-                <a href="https://adsnew.org/category/cases/" target="_blank" class="btn-all-cases">Все кейсы →</a>
+                <a href="https://adsnew.org/category/cases/" target="_blank" class="btn-all-cases">Смотреть все кейсы →</a>
             </div>
         </details>
 
@@ -128,6 +123,15 @@
         <a href="https://t.me/mailovaja" target="_blank" class="btn btn-tg">Написать в Telegram</a>
         <a href="https://wa.me/972537086545" target="_blank" class="btn btn-wa">Написать в WhatsApp</a>
 
+    </div>
+
+    <!-- СТИЛЬНЫЕ СОЦСЕТИ В ФУТЕРЕ (БЕЗ УБОГИХ ИКОНОК) -->
+    <div class="footer-socials">
+        <a href="https://www.instagram.com/ads_target_pr/" target="_blank" class="social-pill">Instagram</a>
+        <a href="https://www.facebook.com/newadstarget" target="_blank" class="social-pill">Facebook</a>
+        <a href="https://www.tiktok.com/@tatyana.ads" target="_blank" class="social-pill">TikTok</a>
+        <a href="https://www.threads.com/@ads_target_pr?hl=ru" target="_blank" class="social-pill">Threads</a>
+        <a href="#" target="_blank" class="social-pill">YouTube</a>
     </div>
 
     <!-- КНОПКА ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ -->
@@ -150,7 +154,6 @@
     <script>
         function openPolicy() { document.getElementById('policyModal').style.display = 'flex'; }
         function closePolicy() { document.getElementById('policyModal').style.display = 'none'; }
-        // Закрытие при клике мимо окна
         window.onclick = function(event) {
             var modal = document.getElementById('policyModal');
             if (event.target == modal) { modal.style.display = "none"; }
