@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены | Татьяна Новикова</title>
+    
+    <!-- === GOOGLE TAG === -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KF8DCZKLR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1KF8DCZKLR');
+    </script>
+
+    <!-- === META PIXEL === -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e);s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1302053460890219');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- === TIKTOK PIXEL === -->
+    <script>
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script");a.parentNode.insertBefore(o,a)};
+        ttq.load('D1CJDVJC77U8IVAAI6MG');
+        ttq.page();
+      }(window, document, 'ttq');
+    </script>
+
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #fcfcfc; color: #333; margin: 0; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 5px; }
+        .header p { color: #666; font-size: 15px; max-width: 400px; margin: 0 auto; line-height: 1.5; }
+        
+        /* Кнопка "Назад" */
+        .btn-back { display: inline-block; padding: 10px 20px; background-color: #eee; color: #333; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px; font-size: 14px; transition: background 0.2s; }
+        .btn-back:hover { background-color: #ddd; }
+
+        .pricing-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 15px; }
+        
+        /* Стили аккордеонов (групп) */
+        details { background-color: #fff; border: 1px solid #e5e5e5; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); overflow: hidden; }
+        summary { padding: 18px 20px; font-weight: 700; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background-color: #fff; transition: background 0.2s; }
+        summary:hover { background-color: #fafafa; }
+        summary::after { content: '▼'; font-size: 12px; color: #aaa; transition: transform 0.3s ease; }
+        details[open] summary::after { transform: rotate(180deg); }
+        details[open] summary { border-bottom: 1px solid #eee; background-color: #fafafa; }
+        
+        /* Внутреннее содержимое тарифов */
+        .tariffs { padding: 20px; display: flex; flex-direction: column; gap: 20px; background-color: #fff; }
+        .tariff-card { border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
+        .tariff-title { font-size: 16px; font-weight: bold; margin-bottom: 5px; color: #111; display: flex; justify-content: space-between; align-items: center; }
+        .tariff-price { color: #d64024; font-size: 18px; font-weight: 800; }
+        .tariff-desc { font-size: 13px; color: #555; line-height: 1.5; margin-top: 10px; }
+        .tariff-desc ul { margin: 5px 0 0 0; padding-left: 20px; }
+        
+        /* Выделение тарифа PRO */
+        .tariff-pro { background: #fffcfb; border-color: #ffe0d9; }
+        .pro-badge { background: #d64024; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 10px; vertical-align: middle; margin-left: 8px; }
+
+        /* Кнопка "Заказать" */
+        .btn-order { display: block; background-color: #333; color: #fff; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; margin-top: 25px; transition: background 0.2s; }
+        .btn-order:hover { background-color: #000; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-back">← Назад на главную</a>
+
+    <div class="header">
+        <h1>Стоимость услуг</h1>
+        <p>Выберите вашу нишу, чтобы посмотреть тарифы на настройку и ведение рекламы.</p>
+    </div>
+
+    <div class="pricing-container">
+        
+        <!-- ГРУППА 1 -->
+        <details>
+            <summary>Ручной массаж, маникюр, ресницы, брови</summary>
+            <div class="tariffs">
+                <div class="tariff-card">
+                    <div class="tariff-title">Базовый <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">
+                        Что входит в стоимость:
+                        <ul>
+                            <li>Анализ конкурентов и ЦА</li>
+                            <li>Создание рекламных макетов</li>
+                            <li>Настройка и запуск кампаний</li>
+                            <li>Ведение 1 месяц</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tariff-card tariff-pro">
+                    <div class="tariff-title">PRO <span class="pro-badge">Хит</span> <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">
+                        Всё из базового тарифа, плюс:
+                        <ul>
+                            <li>Углубленная аналитика</li>
+                            <li>Масштабирование связок</li>
+                            <li>Еженедельная отчетность</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- ГРУППА 2 -->
+        <details>
+            <summary>Аппаратный массаж, парикмахер, фитнес, ПМ</summary>
+            <div class="tariffs">
+                <div class="tariff-card">
+                    <div class="tariff-title">Базовый <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">Опишите кратко, что входит в базовый тариф для этой группы.</div>
+                </div>
+                <div class="tariff-card tariff-pro">
+                    <div class="tariff-title">PRO <span class="pro-badge">Хит</span> <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">Опишите преимущества PRO-тарифа для этой группы.</div>
+                </div>
+            </div>
+        </details>
+
+        <!-- ГРУППА 3 -->
+        <details>
+            <summary>Косметология и Салоны красоты (Комплекс)</summary>
+            <div class="tariffs">
+                <div class="tariff-card">
+                    <div class="tariff-title">Базовый <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">Продвижение сложных ниш, тесты офферов, настройка пикселей.</div>
+                </div>
+                <div class="tariff-card tariff-pro">
+                    <div class="tariff-title">PRO <span class="pro-badge">Хит</span> <span class="tariff-price">$000 / мес</span></div>
+                    <div class="tariff-desc">Полный комплекс для салонов и клиник с несколькими направлениями.</div>
+                </div>
+            </div>
+        </details>
+
+        <!-- ГРУППА 4 -->
+        <details>
+            <summary>Другие ниши (Индивидуальный расчет)</summary>
+            <div class="tariffs">
+                <div class="tariff-card">
+                    <div class="tariff-title">Индивидуальный проект <span class="tariff-price">От $000</span></div>
+                    <div class="tariff-desc">Свяжитесь со мной для обсуждения вашего проекта, и я подготовлю персональное предложение.</div>
+                </div>
+            </div>
+        </details>
+
+        <!-- ГРУППА 5 -->
+        <details>
+            <summary>Дополнительные услуги</summary>
+            <div class="tariffs">
+                <div class="tariff-card">
+                    <div class="tariff-title">Консультация <span class="tariff-price">$000</span></div>
+                    <div class="tariff-desc">Разбор вашего рекламного кабинета, поиск ошибок и рекомендации.</div>
+                </div>
+                <div class="tariff-card">
+                    <div class="tariff-title">Разблокировка кабинета <span class="tariff-price">$000</span></div>
+                    <div class="tariff-desc">Помощь с банами в Meta Ads.</div>
+                </div>
+            </div>
+        </details>
+
+        <!-- КНОПКА ЗАКАЗАТЬ -->
+        <a href="https://wa.me/972537086545" target="_blank" class="btn-order">Связаться для заказа (WhatsApp)</a>
+
+    </div>
+
+</body>
+</html>
