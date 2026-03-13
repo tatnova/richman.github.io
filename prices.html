@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кейсы — Новикова Татьяна</title>
+    <title>Услуги и цены — Новикова Татьяна</title>
 
     <!-- Подключение премиальных шрифтов: Playfair Display и Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2 {
+        h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 400;
             margin: 0;
@@ -55,23 +55,23 @@
 
         .subtitle {
             text-align: center;
-            font-size: 15px;
+            font-size: 14px;
             color: #555;
-            letter-spacing: 0.5px;
-            margin-bottom: 60px;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
             text-transform: uppercase;
         }
 
         section {
-            padding: 40px 20px 80px 20px;
-            max-width: 900px;
+            padding: 40px 20px 60px 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         /* НАВИГАЦИЯ */
         .nav-top {
             padding: 30px 20px;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -83,58 +83,9 @@
             letter-spacing: 1px;
             border-bottom: 1px solid #000;
             padding-bottom: 2px;
-            transition: opacity 0.3s;
-        }
-        .back-link:hover {
-            opacity: 0.6;
         }
 
-        /* СЕТКА КЕЙСОВ */
-        .cases-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Две колонки на компьютере */
-            gap: 20px;
-        }
-
-        /* КАРТОЧКА КЕЙСА */
-        .case-card {
-            display: block;
-            border: 1px solid rgba(0,0,0,0.1);
-            padding: 30px;
-            text-decoration: none;
-            color: inherit;
-            background: transparent;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .case-card:hover {
-            border-color: #000;
-            background-color: rgba(0,0,0,0.02);
-            transform: translateY(-2px);
-        }
-
-        .case-geo {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #666;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .case-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
-
-        .case-desc {
-            font-size: 13px;
-            color: #555;
-        }
-
+        /* СТРОГИЕ КНОПКИ */
         .btn {
             display: inline-block;
             background: transparent;
@@ -149,7 +100,8 @@
             text-decoration: none;
             transition: all 0.4s ease;
             cursor: pointer;
-            margin-top: 40px;
+            text-align: center;
+            margin: 10px 5px;
         }
 
         .btn:hover {
@@ -157,12 +109,160 @@
             color: #F5F5F2;
         }
 
-        /* АДАПТИВНОСТЬ */
-        @media (max-width: 768px) {
-            .cases-grid {
-                grid-template-columns: 1fr; /* Одна колонка на телефоне */
-            }
-            h1 { font-size: 28px; }
+        .btn-full {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* ГАРМОШКА (АККОРДЕОН) */
+        .accordion {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+        }
+
+        .acc-item {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .acc-header {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 25px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #000;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: opacity 0.3s;
+        }
+
+        .acc-header:hover {
+            opacity: 0.7;
+        }
+
+        .acc-icon {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .acc-header.active .acc-icon {
+            transform: rotate(45deg); /* Крестик при открытии */
+        }
+
+        .acc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .acc-inner {
+            padding: 10px 0 40px 0;
+        }
+
+        /* КАРТОЧКИ ТАРИФОВ ВНУТРИ ГАРМОШКИ */
+        .tariff-block {
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .tariff-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .tariff-price {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .tariff-desc {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .features-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #000;
+        }
+
+        /* ЧТО ТРЕБУЕТСЯ ОТ КЛИЕНТА */
+        .client-req {
+            background-color: #EFEFEA;
+            padding: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .client-req h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ */
+        .extra-services {
+            padding-top: 20px;
+        }
+
+        .extra-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .extra-item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .extra-item .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 30px; }
+            .acc-header { font-size: 18px; }
+            .tariff-block { padding: 20px; }
         }
     </style>
 </head>
@@ -174,92 +274,219 @@
     </div>
 
     <section>
-        <h1>Практика и результаты</h1>
-        <p class="subtitle">Международный опыт продвижения бьюти-бизнеса</p>
+        <h1>Инвестиции в маркетинг</h1>
+        <p class="subtitle">Выберите свой формат работы</p>
 
-        <div class="cases-grid">
+        <!-- ГАРМОШКА -->
+        <div class="accordion">
+
+            <!-- Вкладка 1: Частные мастера -->
+            <div class="acc-item">
+                <button class="acc-header">
+                    1. Для частных мастеров и новых проектов <span class="acc-icon">+</span>
+                </button>
+                <div class="acc-content">
+                    <div class="acc-inner">
+                        
+                        <div class="tariff-block">
+                            <h3 class="tariff-name">Базовый: Быстрый старт</h3>
+                            <div class="tariff-price">$200 <span style="font-size: 14px; font-weight: 300;">/ 650 ₪</span></div>
+                            <div class="tariff-desc">Сфокусированный запуск для получения первых заявок.</div>
+                            <ul class="features-list">
+                                <li>Техническая настройка кабинетов с нуля.</li>
+                                <li>Анализ конкурентов и создание цепляющих офферов.</li>
+                                <li>Разработка макетов (до 4 шт) и запуск на 1 языке.</li>
+                                <li>Meta Ads (Instagram, Facebook), Threads + WhatsApp.</li>
+                                <li>Ежедневный контроль бюджета и оптимизация.</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20Базовый%20тариф%20(200$)" class="btn btn-full" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                        <div class="tariff-block" style="border-color: #000;">
+                            <h3 class="tariff-name">ПРО: Комплекс и продажи</h3>
+                            <div class="tariff-price">$300 <span style="font-size: 14px; font-weight: 300;">/ 1000 ₪</span></div>
+                            <div class="tariff-desc">Глубокая проработка воронки продаж и стабильная система.</div>
+                            <ul class="features-list">
+                                <li>Всё из Базового тарифа + Полная упаковка профиля (аудит).</li>
+                                <li>Скрипты продаж: пропишу ответы для Директа для закрытия возражений.</li>
+                                <li>Безлимит макетов на тесты и мультиязычный запуск.</li>
+                                <li>Омниканальность: дополнительно подключаем TikTok.</li>
+                                <li>Ретаргетинг (догоняющая реклама).</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20ПРО%20тариф%20(300$)" class="btn btn-full" style="background: #000; color: #fff;" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка 2: Салоны красоты -->
+            <div class="acc-item">
+                <button class="acc-header">
+                    2. Для действующих салонов красоты <span class="acc-icon">+</span>
+                </button>
+                <div class="acc-content">
+                    <div class="acc-inner">
+                        
+                        <div class="tariff-block">
+                            <h3 class="tariff-name">Базовый: Быстрый старт</h3>
+                            <div class="tariff-price">$300 <span style="font-size: 14px; font-weight: 300;">/ 1000 ₪</span></div>
+                            <div class="tariff-desc">Идеально для запуска конкретной акции салона.</div>
+                            <ul class="features-list">
+                                <li>Техническая настройка рекламных кабинетов с нуля.</li>
+                                <li>Разработка до 4 макетов и запуск рекламы на 1 языке.</li>
+                                <li>Подключение Meta Ads, Threads и прямые переходы в WhatsApp.</li>
+                                <li>Оптимизация для получения самых дешевых заявок.</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20Базовый%20тариф%20(300$)" class="btn btn-full" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                        <div class="tariff-block" style="border-color: #000;">
+                            <h3 class="tariff-name">ПРО: Комплекс и продажи</h3>
+                            <div class="tariff-price">$450 <span style="font-size: 14px; font-weight: 300;">/ 1500 ₪</span></div>
+                            <div class="tariff-desc">Стабильная система для работы вдолгую и масштабирования.</div>
+                            <ul class="features-list">
+                                <li>Аудит посадочных площадок и упаковка бизнеса.</li>
+                                <li>Пошаговые скрипты продаж для администраторов.</li>
+                                <li>Безлимит на создание макетов и запуск на нескольких языках.</li>
+                                <li>Подключение TikTok и мощный Ретаргетинг.</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20ПРО%20тариф%20(450$)" class="btn btn-full" style="background: #000; color: #fff;" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка 3: Клиники и курсы -->
+            <div class="acc-item">
+                <button class="acc-header">
+                    3. Для клиник и запусков курсов <span class="acc-icon">+</span>
+                </button>
+                <div class="acc-content">
+                    <div class="acc-inner">
+                        
+                        <div class="tariff-block">
+                            <h3 class="tariff-name">Трафик на максимум</h3>
+                            <div class="tariff-price">$400 <span style="font-size: 14px; font-weight: 300;">/ 1300 ₪</span></div>
+                            <div class="tariff-desc">Для запуска мощного потока заявок с охватом всего города.</div>
+                            <ul class="features-list">
+                                <li>Разработка от 20 рекламных макетов для поиска самых дешевых заявок.</li>
+                                <li>Мультиязычность: параллельный запуск на нескольких языках.</li>
+                                <li>Полный ежедневный контроль и масштабирование бюджета.</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20тариф%20Трафик%20на%20максимум" class="btn btn-full" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                        <div class="tariff-block" style="border-color: #000;">
+                            <h3 class="tariff-name">ПРО: Система и Запуски</h3>
+                            <div class="tariff-price">$800 - $1000</div>
+                            <div class="tariff-desc">Безопасная реклама, автоматизация и продажа дорогих курсов.</div>
+                            <ul class="features-list">
+                                <li><strong>Защита от блокировок:</strong> обход строгих правил Meta, апелляции (критично для косметологии).</li>
+                                <li><strong>Аудит и контент-стратегия:</strong> четкие рекомендации для съемок.</li>
+                                <li>Скрипты продаж для закрытия на высокие чеки.</li>
+                                <li><strong>Автоматизация:</strong> настройка чат-бота для обработки заявок 24/7.</li>
+                            </ul>
+                            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20тариф%20Запуски" class="btn btn-full" style="background: #000; color: #fff;" onclick="fbq('track', 'Lead');">Выбрать</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка 4: Другая ниша -->
+            <div class="acc-item">
+                <button class="acc-header" style="border-bottom: none;">
+                    4. У меня другая ниша <span class="acc-icon">+</span>
+                </button>
+                <div class="acc-content">
+                    <div class="acc-inner" style="text-align: center; padding-top: 30px;">
+                        <h3 style="font-size: 20px; margin-bottom: 15px;">Индивидуальный расчет</h3>
+                        <p style="font-size: 15px; color: #444; margin-bottom: 25px;">Если ваш проект не относится к бьюти-сфере или требует нестандартного подхода, напишите мне. Мы обсудим детали и я рассчитаю стоимость при личном общении.</p>
+                        <a href="https://wa.me/972537086545?text=Здравствуйте!%20У%20меня%20нестандартный%20проект,%20хочу%20обсудить%20стоимость" class="btn" style="background: #000; color: #fff;" onclick="fbq('track', 'Contact');">Написать в WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- БЛОК: ЧТО ТРЕБУЕТСЯ ОТ КЛИЕНТА -->
+        <div class="client-req">
+            <h3>Что потребуется от вас:</h3>
+            <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Я ценю ваше время, поэтому беру всю маркетинговую и техническую рутину на себя.</p>
+            <ul class="features-list" style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li><strong>Минимальная вовлеченность:</strong> Участие и согласование только на ключевых этапах (утверждение офферов и макетов).</li>
+                <li><strong>Контент:</strong> По возможности — предоставление исходников (фото и видео ваших работ/процессов). Всё остальное я делаю сама!</li>
+            </ul>
+        </div>
+
+        <!-- ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ -->
+        <div class="extra-services">
+            <h2 style="font-size: 26px; text-align: center; margin-bottom: 50px;">Дополнительные услуги</h2>
             
-            <!-- КЕЙС 1 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇦🇪 Абу-Даби, ОАЭ</div>
-                <div class="case-title">Открытие студии маникюра с нуля: 238 клиентов за два месяца</div>
-                <div class="case-desc">Как с помощью рекламы и правильных скриптов продаж удалось создать плотную запись и нанять второго мастера.</div>
-            </a>
+            <div class="extra-item">
+                <h4>Упаковка визуала с нуля</h4>
+                <span class="price">$300</span>
+                <p style="font-size: 14px; color: #555; margin: 0;">Отрисовка индивидуального дизайна ленты Instagram и обложек для хайлайтс профессиональным дизайнером.</p>
+            </div>
 
-            <!-- КЕЙС 2 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇺🇸 Иллинойс, США</div>
-                <div class="case-title">Вывод нового салона красоты в плюс: 160 новых клиентов</div>
-                <div class="case-desc">Стратегия, макеты и результат — 794 обращения и стабильный поток клиентов за 2,5 месяца.</div>
-            </a>
+            <div class="extra-item">
+                <h4>Автоматизация и Чат-боты</h4>
+                <span class="price">$500</span>
+                <p style="font-size: 14px; color: #555; margin: 0;">Сборка умных чат-ботов и автоматических воронок продаж любой сложности для обработки заявок 24/7.</p>
+            </div>
 
-            <!-- КЕЙС 3 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇮🇱 Израиль</div>
-                <div class="case-title">740 заявок на ручной массаж и $9 946 чистой прибыли</div>
-                <div class="case-desc">Как мастеру без базы и опыта обеспечить полную запись в первый месяц работы. Лиды по $1.8.</div>
-            </a>
-
-            <!-- КЕЙС 4 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇩🇪 Германия</div>
-                <div class="case-title">Продвижение обучения мастера перманентного макияжа (PMU)</div>
-                <div class="case-desc">Успешный запуск в условиях жесткой конкуренции: значительное увеличение заявок на курс.</div>
-            </a>
-
-            <!-- КЕЙС 5 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇨🇦 Канада</div>
-                <div class="case-title">Тестирование новых услуг косметологии: 58 обращений за 2 недели</div>
-                <div class="case-desc">Акцент на узкую аудиторию. Запуск на уходовые процедуры, массаж лица и работу с телом.</div>
-            </a>
-
-            <!-- КЕЙС 6 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇹🇷 Турция</div>
-                <div class="case-title">Продвижение салона красоты: 610 обращений за 3 месяца</div>
-                <div class="case-desc">Стабильный поток клиентов в Мармарисе и Анталье с ценой заявки $1,84.</div>
-            </a>
-
-            <!-- КЕЙС 7 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇬🇪 Грузия</div>
-                <div class="case-title">Быстрый старт новой клиники: 123 обращения на увеличение губ</div>
-                <div class="case-desc">Узнаваемый бренд и активный поток клиентов всего за одну неделю рекламы.</div>
-            </a>
-
-            <!-- КЕЙС 8 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇺🇸 Лос-Анджелес, США</div>
-                <div class="case-title">Продажа дорогого ($3000) курса пилингов без идеального аккаунта</div>
-                <div class="case-desc">Как таргетированная реклама привела целевую аудиторию на обучение с высоким чеком.</div>
-            </a>
-
-            <!-- КЕЙС 9 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇦🇿 Баку, Азербайджан</div>
-                <div class="case-title">Привлечение клиентов после смены адреса салона</div>
-                <div class="case-desc">Возврат старых клиентов и привлечение новых без потерь по времени.</div>
-            </a>
-
-            <!-- КЕЙС 10 -->
-            <a href="https://instagram.com/your_instagram" class="case-card" onclick="fbq('track', 'ViewContent');">
-                <div class="case-geo">🇮🇱 Израиль</div>
-                <div class="case-title">112 новых клиентов за месяц для мастера перманентного макияжа</div>
-                <div class="case-desc">Снижение стоимости заявки до $3 и увеличение доверия через грамотное оформление профиля.</div>
-            </a>
-
+            <div class="extra-item" style="border-bottom: none;">
+                <h4>Разработка сайта</h4>
+                <span class="price">$1000</span>
+                <p style="font-size: 14px; color: #555; margin: 0;">Создание премиального продающего лендинга (одностраничного сайта) под ваши услуги.</p>
+            </div>
         </div>
 
-        <div style="text-align: center;">
-            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">Обсудить ваш проект</a>
-        </div>
     </section>
 
-    <!-- КОНТАКТЫ И ФУТЕР -->
-    <section style="text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 40px; padding-bottom: 40px;">
-        <a href="privacy.html" style="color: #777; font-size: 12px; text-decoration: underline;">Политика конфиденциальности</a>
+    <!-- КОНТАКТЫ И ФУТЕР С СОЦСЕТЯМИ -->
+    <section style="text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 60px; padding-bottom: 60px;">
+        <h2 style="font-size: 24px; margin-bottom: 30px;">Свяжитесь со мной</h2>
+        <p style="font-size: 14px; color: #555; margin-bottom: 30px;">Выберите удобный мессенджер или соцсеть для связи:</p>
+        
+        <div>
+            <!-- Вставьте ваши реальные ссылки вместо заглушек https://... -->
+            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
+            <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
+            <a href="https://instagram.com/your_instagram" class="btn" onclick="fbq('track', 'Contact');">Instagram</a>
+            <a href="https://facebook.com/your_facebook" class="btn" onclick="fbq('track', 'Contact');">Facebook</a>
+        </div>
+        
+        <br><br>
+        <a href="privacy.html" style="color: #777; font-size: 12px; text-decoration: underline; margin-top: 30px; display: inline-block;">Политика конфиденциальности</a>
     </section>
+
+    <!-- Скрипт для работы Гармошки -->
+    <script>
+        document.querySelectorAll('.acc-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accContent = button.nextElementSibling;
+                
+                // Закрываем другие открытые вкладки (по желанию, можно убрать этот блок, чтобы открывались все)
+                document.querySelectorAll('.acc-header').forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.classList.remove('active');
+                        otherButton.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                // Открываем/закрываем текущую вкладку
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
+                    accContent.style.maxHeight = accContent.scrollHeight + "px";
+                } else {
+                    accContent.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
