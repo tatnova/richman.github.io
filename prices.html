@@ -3,264 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги и цены | Татьяна Новикова</title>
-    
-    <!-- === GOOGLE TAG === -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KF8DCZKLR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1KF8DCZKLR');
-    </script>
+    <title>Услуги и цены — Новикова Татьяна</title>
+
+    <!-- Подключение премиальных шрифтов: Playfair Display и Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1630705058143577');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-    <!-- === TIKTOK PIXEL === -->
     <script>
-      !function (w, d, t) {
-        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script");a.parentNode.insertBefore(o,a)};
-        ttq.load('D1CJDVJC77U8IVAAI6MG');
-        ttq.page();
-      }(window, document, 'ttq');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e);
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1630705058143577');
+    fbq('track', 'PageView');
     </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
-        /* ЧИСТЫЙ БЕЛЫЙ ФОН И ЧЕРНЫЙ ТЕКСТ */
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff; color: #000000; margin: 0; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; }
-        
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.5px; }
-        .header p { color: #555; font-size: 15px; max-width: 400px; margin: 0 auto; line-height: 1.5; }
-        
-        .btn-back { display: inline-block; padding: 10px 20px; background-color: #f7f7f7; color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px; font-size: 14px; border: 1px solid #eaeaea; transition: background 0.2s; }
-        .btn-back:hover { background-color: #eee; }
+        /* Базовые настройки стиля Quiet Luxury */
+        body {
+            background-color: #F5F5F2; /* Светлый серо-бежевый фон */
+            color: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        .pricing-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 15px; }
-        
-        /* Стили аккордеонов */
-        details { background-color: #ffffff; border: 1px solid #eaeaea; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); overflow: hidden; }
-        summary { padding: 18px 20px; font-weight: 700; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; transition: background 0.2s; }
-        summary:hover { background-color: #fcfcfc; }
-        summary::after { content: '▼'; font-size: 12px; color: #888; transition: transform 0.3s ease; }
-        details[open] summary::after { transform: rotate(180deg); }
-        details[open] summary { border-bottom: 1px solid #eaeaea; background-color: #fafafa; }
-        
-        /* Внутреннее содержимое тарифов */
-        .tariffs { padding: 20px; display: flex; flex-direction: column; gap: 20px; background-color: #ffffff; }
-        .tariff-card { border: 1px solid #eaeaea; border-radius: 8px; padding: 18px; background: #fafafa; }
-        .tariff-title { font-size: 16px; font-weight: 800; margin-bottom: 5px; color: #000; display: flex; justify-content: space-between; align-items: center; }
-        
-        /* ОРАНЖЕВЫЕ АКЦЕНТЫ */
-        .tariff-price { color: #f57c00; font-size: 18px; font-weight: 800; }
-        .tariff-pro { background: #fffaf5; border-color: #ffe0b2; }
-        .pro-badge { background: #f57c00; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 10px; vertical-align: middle; margin-left: 8px; font-weight: 600; text-transform: uppercase; }
+        /* ТИПОГРАФИКА */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            margin: 0;
+            color: #000;
+        }
 
-        .tariff-desc { font-size: 14px; color: #333; line-height: 1.5; margin-top: 12px; }
-        .tariff-desc ul { margin: 8px 0 0 0; padding-left: 20px; }
-        .tariff-desc li { margin-bottom: 6px; }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
 
-        /* КНОПКИ ДЛЯ СВЯЗИ */
-        .contact-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 25px; }
-        .btn { display: block; text-align: center; padding: 16px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s ease; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        
-        /* Светло-зеленый WhatsApp и синий Telegram */
-        .btn-wa { background-color: #e8f9ee; color: #1fb141; border: 1px solid #bbf0d4; }
-        .btn-tg { background-color: #eaf4ff; color: #0088cc; border: 1px solid #cce4ff; }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: #555;
+            letter-spacing: 0.5px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
 
-        /* ИКОНКИ СОЦСЕТЕЙ В ФУТЕРЕ */
-        .social-row { display: flex; gap: 24px; justify-content: center; margin-top: 40px; margin-bottom: 20px; }
-        .social-icon { color: #555; transition: color 0.2s ease, transform 0.2s ease; display: block; }
-        .social-icon:hover { color: #000; transform: scale(1.15); }
+        /* СЕКЦИИ */
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* СТРОГИЕ КНОПКИ */
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: #000;
+            border: 1px solid #000;
+            padding: 14px 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #000;
+            color: #F5F5F2;
+        }
+
+        .btn-full {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 30px;
+        }
+
+        /* КАРТОЧКИ ТАРИФОВ (Строгие линии, без скруглений) */
+        .tariff-block {
+            border: 1px solid rgba(0,0,0,0.15);
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            background-color: transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .tariff-block:hover {
+            border-color: #000;
+        }
+
+        .tariff-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .tariff-name {
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .tariff-price {
+            font-size: 32px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .tariff-desc {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* СПИСКИ УСЛУГ */
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .features-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ */
+        .extra-services {
+            margin-top: 60px;
+            border-top: 1px solid #000;
+            padding-top: 40px;
+        }
+
+        .extra-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .extra-item h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .extra-item .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ЧТО ТРЕБУЕТСЯ ОТ КЛИЕНТА */
+        .client-req {
+            background-color: #EFEFEA;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
         
-        .client-note { font-size: 13px; color: #666; background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #eaeaea; }
+        .client-req h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* НАВИГАЦИЯ */
+        .nav-top {
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .tariff-block { padding: 30px 20px; }
+            h1 { font-size: 28px; }
+        }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="btn-back">← Назад на главную</a>
-
-    <div class="header">
-        <h1>Услуги и цены</h1>
-        <p>Выберите вашу нишу, чтобы посмотреть тарифы на настройку и ведение рекламы.</p>
+    <!-- Навигация -->
+    <div class="nav-top">
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
     </div>
 
-    <div class="pricing-container">
+    <section style="padding-top: 20px;">
+        <h1>Услуги и инвестиции</h1>
+        <p class="subtitle">Системный таргетинг и стратегия</p>
+
+        <!-- ТАРИФ 1 -->
+        <div class="tariff-block">
+            <div class="tariff-header">
+                <h3 class="tariff-name">Базовый: Быстрый старт</h3>
+                <div class="tariff-price">$300 <span style="font-size: 18px; color: #666; font-weight: 300;">/ 1000 ₪</span></div>
+                <div class="tariff-desc">Идеально для запуска конкретной акции и получения первых заявок.</div>
+            </div>
+            <ul class="features-list">
+                <li>Вся техническая настройка рекламных кабинетов с нуля.</li>
+                <li>Глубокий анализ конкурентов и создание цепляющих офферов.</li>
+                <li>Разработка макетов (до 4 шт) и запуск рекламы на 1 языке.</li>
+                <li>Подключение площадок: Meta Ads (Instagram, Facebook), Threads + прямой переход в WhatsApp.</li>
+                <li>Ежедневный контроль рекламного бюджета и оптимизация.</li>
+            </ul>
+            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20тариф%20Базовый" class="btn btn-full" onclick="fbq('track', 'Lead');">Выбрать Базовый тариф</a>
+        </div>
+
+        <!-- ТАРИФ 2 -->
+        <div class="tariff-block" style="border-color: #000; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #000; color: #fff; padding: 4px 15px; font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">Рекомендуемый</div>
+            <div class="tariff-header">
+                <h3 class="tariff-name">ПРО: Комплекс и продажи</h3>
+                <div class="tariff-price">$450 <span style="font-size: 18px; color: #666; font-weight: 300;">/ 1500 ₪</span></div>
+                <div class="tariff-desc">Стабильная система для работы вдолгую и продажи дорогих услуг (курсов, комплексов).</div>
+            </div>
+            <p style="font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 20px; text-align: center;">Включает всё из Базового тарифа, ПЛЮС:</p>
+            <ul class="features-list">
+                <li><strong>Упаковка профиля:</strong> полный аудит Instagram и сайта, чтобы аудитория доверяла вам с первых секунд.</li>
+                <li><strong>Скрипты продаж:</strong> пропишу сценарии ответов в Директе, чтобы вы легко закрывали возражения и продавали на высокие чеки.</li>
+                <li><strong>Масштаб:</strong> безлимитное создание макетов и параллельный запуск рекламы на нескольких языках.</li>
+                <li><strong>Омниканальность:</strong> дополнительно подключаем трафик из TikTok.</li>
+                <li><strong>Ретаргетинг:</strong> настройка «догоняющей» рекламы для тех, кто зашел в профиль, но не записался сразу.</li>
+            </ul>
+            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20тариф%20ПРО" class="btn btn-full" style="background: #000; color: #F5F5F2;" onclick="fbq('track', 'Lead');">Выбрать тариф ПРО</a>
+        </div>
+
+        <!-- БЛОК: ЧТО ТРЕБУЕТСЯ ОТ КЛИЕНТА -->
+        <div class="client-req">
+            <h3>Что потребуется от вас:</h3>
+            <p style="font-size: 14px; color: #444; margin-bottom: 20px;">Я ценю ваше время, поэтому беру всю маркетинговую и техническую рутину на себя.</p>
+            <ul class="features-list" style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li><strong>Минимальная вовлеченность:</strong> Участие и согласование только на ключевых этапах запуска (утверждение офферов и макетов).</li>
+                <li><strong>Контент:</strong> По возможности — предоставление исходников (фото и видео ваших работ/процессов). Всё остальное я делаю сама!</li>
+            </ul>
+        </div>
+
+        <!-- ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ -->
+        <div class="extra-services">
+            <h2 style="font-size: 24px; text-align: center; margin-bottom: 40px;">Дополнительные услуги</h2>
+            <p style="text-align: center; font-size: 14px; color: #555; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px;">То, что можно делегировать моей команде для усиления результата</p>
+            
+            <div class="extra-item">
+                <h4>Упаковка визуала с нуля</h4>
+                <span class="price">$300</span>
+                <p style="font-size: 14px; color: #444; margin: 0;">Отрисовка индивидуального дизайна ленты Instagram и обложек для хайлайтс профессиональным дизайнером.</p>
+            </div>
+
+            <div class="extra-item">
+                <h4>Автоматизация и Чат-боты</h4>
+                <span class="price">$500</span>
+                <p style="font-size: 14px; color: #444; margin: 0;">Сборка умных чат-ботов и автоматических воронок продаж любой сложности для обработки заявок 24/7.</p>
+            </div>
+
+            <div class="extra-item" style="border-bottom: none;">
+                <h4>Разработка сайта</h4>
+                <span class="price">$1000</span>
+                <p style="font-size: 14px; color: #444; margin: 0;">Создание премиального продающего лендинга (одностраничного сайта) под ваши услуги.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- КОНТАКТЫ И ФУТЕР -->
+    <section style="text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 60px; padding-bottom: 60px;">
+        <h2 style="font-size: 22px; margin-bottom: 30px;">Свяжитесь со мной для старта</h2>
+        <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">Написать в WhatsApp</a>
+        <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Написать в Telegram</a>
         
-        <!-- ГРУППА 1 -->
-        <details>
-            <summary>Ручной массаж, маникюр, ресницы, брови</summary>
-            <div class="tariffs">
-                <div class="tariff-card">
-                    <div class="tariff-title">Базовый: Быстрый старт 🚀 <span class="tariff-price">$200 / 650 ₪</span></div>
-                    <div class="tariff-desc">
-                        Идеально для запуска конкретной акции и получения первых заявок.
-                        <ul>
-                            <li>Техническая настройка кабинетов с нуля</li>
-                            <li>Анализ конкурентов и создание офферов</li>
-                            <li>Разработка до 4 макетов (на 1 языке)</li>
-                            <li>Meta Ads, Threads + переход в WhatsApp</li>
-                            <li>Ежедневный контроль бюджета</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tariff-card tariff-pro">
-                    <div class="tariff-title">ПРО: Комплекс 💎 <span class="tariff-price">$300 / 1000 ₪</span></div>
-                    <div class="tariff-desc">
-                        Для работы вдолгую и продажи дорогих услуг. <b>Всё из Базового +</b>
-                        <ul>
-                            <li>Упаковка профиля: аудит Instagram/сайта</li>
-                            <li>Скрипты продаж для закрытия возражений в Директе</li>
-                            <li>Безлимит макетов и мультиязычность</li>
-                            <li>Подключение TikTok рекламы</li>
-                            <li>Ретаргетинг (догоняющая реклама)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </details>
-
-        <!-- ГРУППА 2 -->
-        <details>
-            <summary>Аппаратный массаж, парикмахер, фитнес, ПМ</summary>
-            <div class="tariffs">
-                <div class="tariff-card">
-                    <div class="tariff-title">Базовый: Быстрый старт 🚀 <span class="tariff-price">$300 / 1000 ₪</span></div>
-                    <div class="tariff-desc">
-                        Сфокусированный запуск рекламы для получения первых заявок.
-                        <ul>
-                            <li>Техническая настройка кабинетов с нуля</li>
-                            <li>Анализ конкурентов и создание офферов</li>
-                            <li>Разработка до 4 макетов (на 1 языке)</li>
-                            <li>Meta Ads, Threads + переход в WhatsApp</li>
-                            <li>Ежедневный контроль бюджета</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tariff-card tariff-pro">
-                    <div class="tariff-title">ПРО: Комплекс 💎 <span class="tariff-price">$450 / 1500 ₪</span></div>
-                    <div class="tariff-desc">
-                        Система продаж и работа с высокими чеками. <b>Всё из Базового +</b>
-                        <ul>
-                            <li>Полный аудит посадочных площадок</li>
-                            <li>Разработка скриптов продаж</li>
-                            <li>Безлимит макетов и запуск на нескольких языках</li>
-                            <li>Подключение TikTok рекламы</li>
-                            <li>Ретаргетинг (догоняющая реклама)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </details>
-
-        <!-- ГРУППА 3 -->
-        <details>
-            <summary>Косметология и Салоны красоты</summary>
-            <div class="tariffs">
-                <div class="tariff-card">
-                    <div class="tariff-title">Базовый: Трафик 🚀 <span class="tariff-price">$400 / 1300 ₪</span></div>
-                    <div class="tariff-desc">
-                        Запуск мощного потока заявок с охватом всей ЦА города.
-                        <ul>
-                            <li>Техническая настройка с нуля</li>
-                            <li>От 20 рекламных макетов для поиска связок</li>
-                            <li>Мультиязычность</li>
-                            <li>Meta Ads, Threads + переход в WhatsApp</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tariff-card tariff-pro">
-                    <div class="tariff-title">ПРО: Система и запуски 💎 <span class="tariff-price">$800 – $1000</span></div>
-                    <div class="tariff-desc">
-                        Автоматизация и продажа дорогих курсов. <b>Всё из Базового +</b>
-                        <ul>
-                            <li><b>Защита от блокировок Meta</b> (апелляции, техподдержка)</li>
-                            <li>Скрипты продаж для администратора</li>
-                            <li>Аудит и контент-стратегия</li>
-                            <li>Настройка чат-бота для заявок 24/7</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </details>
-
-        <!-- ГРУППА 4 -->
-        <details>
-            <summary>Другие ниши</summary>
-            <div class="tariffs">
-                <div class="tariff-card">
-                    <div class="tariff-title">Индивидуальный расчет</div>
-                    <div class="tariff-desc">
-                        Свяжитесь со мной для обсуждения вашего проекта, и я подготовлю персональное предложение и стратегию продвижения.
-                    </div>
-                </div>
-            </div>
-        </details>
-
-        <!-- ГРУППА 5 -->
-        <details>
-            <summary>➕ Дополнительные услуги</summary>
-            <div class="tariffs">
-                <div class="tariff-card">
-                    <div class="tariff-title">Упаковка визуала с нуля <span class="tariff-price">$300</span></div>
-                    <div class="tariff-desc">Отрисовка индивидуального дизайна ленты Instagram и обложек для хайлайтс профессиональным дизайнером.</div>
-                </div>
-                <div class="tariff-card">
-                    <div class="tariff-title">Разработка сайта <span class="tariff-price">$1000</span></div>
-                    <div class="tariff-desc">Создание продающего лендинга (одностраничного сайта) под ваши услуги.</div>
-                </div>
-                <div class="tariff-card">
-                    <div class="tariff-title">Автоматизация <span class="tariff-price">$500</span></div>
-                    <div class="tariff-desc">Сборка чат-ботов и автоматических воронок продаж любой сложности.</div>
-                </div>
-            </div>
-        </details>
-
-        <!-- ПРИМЕЧАНИЕ ДЛЯ КЛИЕНТА -->
-        <div class="client-note">
-            <b>От вас потребуется только:</b> минимальное участие в согласовании офферов и предоставление фото/видео процессов. Всю маркетинговую и техническую рутину я беру на себя!
-        </div>
-
-        <!-- КНОПКИ ДЛЯ СВЯЗИ -->
-        <div class="contact-buttons">
-           <a href="https://wa.me/972537086545" target="_blank" class="btn btn-wa" onclick="fbq('track', 'Contact');">Написать в WhatsApp</a>
-           <a href="https://t.me/mailovaja" target="_blank" class="btn btn-tg" onclick="fbq('track', 'Contact');">Написать в Telegram</a>
-        </div>
-
-    </div>
-
-    <!-- ИКОНКИ СОЦСЕТЕЙ В ФУТЕРЕ -->
-    <div class="social-row">
-        <a href="https://www.instagram.com/ads_target_pr/" target="_blank" class="social-icon" title="Instagram">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5Z" /></svg>
-        </a>
-        <a href="https://www.facebook.com/newadstarget" target="_blank" class="social-icon" title="Facebook">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
-        </a>
-        <a href="https://www.tiktok.com/@tatyana.ads" target="_blank" class="social-icon" title="TikTok">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.66-.4 3.35-1.28 4.75-1.29 2.06-3.64 3.31-6.14 3.33-2.52.02-4.99-1.21-6.32-3.23-1.39-2.12-1.52-4.96-.28-7.18 1.25-2.22 3.65-3.56 6.18-3.58v4.06c-1.56.02-3.11.96-3.83 2.37-.73 1.45-.63 3.29.28 4.64.91 1.35 2.58 2.08 4.2 1.94 1.58-.13 3.03-1.04 3.8-2.43.76-1.38 1.05-3.05 1.05-4.66V0h-1.74z"/></svg>
-        </a>
-        <a href="https://www.threads.com/@ads_target_pr?hl=ru" target="_blank" class="social-icon" title="Threads">
-            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M14.65,12.75C14.47,13.81 13.84,14.61 12.79,15.13C12,15.5 11.08,15.7 10.12,15.7C8.16,15.7 6.64,15.08 5.56,13.83C4.47,12.58 3.93,10.87 3.93,8.7C3.93,6.5 4.5,4.78 5.64,3.54C6.77,2.29 8.35,1.67 10.36,1.67C12.44,1.67 14,2.33 15.14,3.65C16.27,4.97 16.84,6.77 16.84,9V9.75H6.38C6.44,11.24 6.84,12.37 7.57,13.15C8.3,13.92 9.25,14.31 10.42,14.31C11.18,14.31 11.83,14.16 12.38,13.86C12.92,13.56 13.31,13.04 13.56,12.3H14.65M6.43,8.44H14.39C14.33,7.21 14,6.23 13.43,5.5C12.86,4.77 11.96,4.4 10.74,4.4C9.5,4.4 8.5,4.77 7.74,5.5C6.97,6.23 6.54,7.21 6.43,8.44M11.5,0A11.5,11.5 0 0,1 23,11.5A11.5,11.5 0 0,1 11.5,23C8.65,23 6.06,21.96 4,20.25L5,19C6.83,20.5 9.07,21.36 11.5,21.36A9.86,9.86 0 0,0 21.36,11.5A9.86,9.86 0 0,0 11.5,1.64A9.86,9.86 0 0,0 1.64,11.5C1.64,14 2.54,16.27 4.04,18H5.66C4.42,16.47 3.68,14.57 3.68,12.5A7.82,7.82 0 0,1 11.5,4.68A7.82,7.82 0 0,1 19.32,12.5A7.82,7.82 0 0,1 11.5,20.32C10.05,20.32 8.7,19.92 7.5,19.23L6.68,20.66C8.08,21.5 9.73,22 11.5,22A10.5,10.5 0 0,0 22,11.5A10.5,10.5 0 0,0 11.5,1A10.5,10.5 0 0,0 1,11.5C1,13.9 1.83,16.12 3.2,17.89L2.24,19.06C0.83,17.13 0,14.71 0,11.5A11.5,11.5 0 0,1 11.5,0Z" /></svg>
-        </a>
-    </div>
+        <br><br>
+        <a href="privacy.html" style="color: #777; font-size: 12px; text-decoration: underline; margin-top: 40px; display: inline-block;">Политика конфиденциальности</a>
+    </section>
 
 </body>
 </html>
