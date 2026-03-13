@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Татьяна Новикова — Таргетолог для бьюти-ниши</title>
+    <meta name="description" content="Новикова Татьяна — Таргетолог для бьюти-ниши. Системный таргетинг и стратегия. Увеличиваю выручку салонов красоты и бьюти-мастеров через соцсети Instagram, Facebook, TikTok, YouTube.">
+    <title>Новикова Татьяна — Таргетолог для бьюти-ниши</title>
 
-    <!-- Подключение премиальных шрифтов: Playfair Display и Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
@@ -21,270 +21,87 @@
     fbq('init', '1630705058143577');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <style>
-        /* Базовые настройки стиля Quiet Luxury */
-        body {
-            background-color: #F5F5F2;
-            color: #1a1a1a;
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ТИПОГРАФИКА: Заголовки с засечками */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            margin: 0;
-            color: #000;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- ПЕРВЫЙ ЭКРАН (ФОТО НА ВЕСЬ ЭКРАН) --- */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            
-            /* Ваше фото из GitHub */
-            background-image: url('140.jpg'); 
-            
-            background-size: cover;
-            background-position: center top;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Полупрозрачная бежевая вуаль для читаемости текста на фоне фото */
-        .hero-overlay {
-            background: rgba(245, 245, 242, 0.85);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 20px;
-            max-width: 700px;
-        }
-
-        .hero-content h1 {
-            font-size: 38px;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-
-        .hero-subtitle {
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #333;
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        .hero-desc {
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 40px;
-        }
-
-        /* Базовые секции */
-        section {
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* СТРОГИЕ КНОПКИ */
-        .btn {
-            display: inline-block;
-            background: transparent;
-            color: #000;
-            border: 1px solid #000;
-            padding: 14px 30px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .btn:hover {
-            background: #000;
-            color: #F5F5F2;
-        }
-
-        /* БЛОК ЦИФР */
-        .stats-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding: 40px 0;
-            margin-top: -20px;
-            margin-bottom: 40px;
-        }
-
-        .stat-item h3 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .stat-item p {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666;
-            margin: 0;
-        }
-
-        /* БЛОК УСЛУГ */
-        .services-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 40px 0;
-            text-align: left;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .services-list li {
-            font-size: 16px;
-            margin-bottom: 25px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding-bottom: 15px;
-        }
-
-        .services-list strong {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-            color: #000;
-        }
-
-        /* ОФОРМЛЕНИЕ КЕЙСОВ */
-        .case-link-block {
-            display: block;
-            text-align: left;
-            border: 1px solid rgba(0,0,0,0.1);
-            padding: 25px;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #000;
-            transition: all 0.3s ease;
-        }
-        .case-link-block:hover {
-            background-color: rgba(0,0,0,0.03);
-            border-color: #000;
-        }
-        .case-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .case-geo {
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #666;
-            letter-spacing: 1px;
-        }
-
-        /* СЕТКА INSTAGRAM */
-        .insta-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .insta-placeholder {
-            aspect-ratio: 1;
-            background-color: rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer-link {
-            color: #777;
-            font-size: 12px;
-            text-decoration: underline;
-            margin-top: 40px;
-            display: inline-block;
-        }
-
-        /* АДАПТИВНОСТЬ */
-        @media (max-width: 600px) {
-            .hero-content h1 { font-size: 32px; }
-            h2 { font-size: 24px; }
-            .stats-grid { 
-                flex-direction: column; 
-                gap: 40px; 
-            }
-            .insta-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .btn {
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-                margin: 10px 0;
-            }
-            section { padding: 60px 20px; }
-        }
-    </style>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView&noscript=1"/></noscript>
 </head>
+<style>
+    body { background-color: #F5F5F2; color: #1a1a1a; font-family: 'Inter', sans-serif; font-weight: 300; margin: 0; padding: 0; line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; margin: 0; color: #000; }
+    h2 { font-size: 28px; margin-bottom: 40px; letter-spacing: 0.5px; }
+    
+    /* ГЛАВНЫЙ ЭКРАН */
+    .hero-section {
+        position: relative;
+        height: 100vh;
+        background-image: url('140.jpg'); 
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Текст внизу */
+    }
+    .hero-gradient {
+        position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
+        background: linear-gradient(to top, rgba(245,245,242,1) 15%, rgba(245,245,242,0.8) 50%, rgba(245,245,242,0) 100%);
+        z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 20px 40px 20px; max-width: 700px; margin: 0 auto; }
+    .hero-content h1 { font-size: 32px; letter-spacing: 1px; margin-bottom: 5px; }
+    .hero-subtitle { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #333; font-weight: 500; margin-bottom: 20px;}
+
+    section { padding: 80px 20px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .seo-text { font-size: 16px; color: #444; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+    .btn { display: inline-block; background: transparent; color: #000; border: 1px solid #000; padding: 14px 25px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; transition: all 0.4s ease; cursor: pointer; margin: 5px; }
+    .btn:hover { background: #000; color: #F5F5F2; }
+
+    .stats-grid { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1); padding: 40px 0; margin-top: 20px; margin-bottom: 40px; }
+    .stat-item h3 { font-size: 32px; margin-bottom: 5px; }
+    .stat-item p { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666; margin: 0; }
+
+    .services-list { list-style: none; padding: 0; margin: 0 0 40px 0; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .services-list li { font-size: 15px; margin-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; }
+    .services-list strong { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; display: block; margin-bottom: 5px; color: #000; }
+
+    .case-link-block { display: block; text-align: left; border: 1px solid rgba(0,0,0,0.1); padding: 25px; margin-bottom: 20px; text-decoration: none; color: #000; transition: all 0.3s ease; }
+    .case-link-block:hover { background-color: rgba(0,0,0,0.03); border-color: #000; }
+    .case-title { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 10px; font-weight: 600; }
+    .case-geo { font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; color: #666; letter-spacing: 1px; margin-bottom: 10px; }
+    .case-desc { font-size: 14px; color: #444; }
+
+    /* КРУГЛЫЕ КНОПКИ СОЦСЕТЕЙ */
+    .social-links { display: flex; justify-content: center; gap: 10px; margin-top: 20px; margin-bottom: 30px; }
+    .social-btn { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; border: 1px solid #000; color: #000; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+    .social-btn:hover { background: #000; color: #F5F5F2; }
+
+    .footer-link { color: #777; font-size: 12px; text-decoration: underline; margin-top: 10px; display: inline-block; }
+
+    @media (max-width: 600px) {
+        .hero-content h1 { font-size: 26px; }
+        .stats-grid { flex-direction: column; gap: 30px; }
+        .btn { display: block; width: 100%; box-sizing: border-box; margin: 10px 0; }
+        section { padding: 60px 20px; }
+    }
+</style>
 <body>
 
-    <!-- ПЕРВЫЙ ЭКРАН (Фото на фоне) -->
+    <!-- ПЕРВЫЙ ЭКРАН (Фото 100% видно сверху, текст внизу) -->
     <header class="hero-section">
-        <div class="hero-overlay"></div>
+        <div class="hero-gradient"></div>
         <div class="hero-content">
             <h1>Новикова Татьяна</h1>
             <div class="hero-subtitle">Таргетолог для бьюти-ниши</div>
-            <p class="hero-desc">Системный таргетинг и стратегия. Помогаю привлекать клиентов и кратно увеличивать выручку салонов красоты и бьюти-мастеров через рекламу в Instagram и Facebook.</p>
-            
-            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">Написать в WhatsApp</a>
-            <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Написать в Telegram</a>
+            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
+            <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
         </div>
     </header>
 
-    <!-- БЛОК ЦИФР И УСЛУГИ -->
-    <section>
+    <!-- SEO ОПИСАНИЕ И ЦИФРЫ -->
+    <section style="padding-top: 40px;">
+        <p class="seo-text">
+            <strong>Системный таргетинг и стратегия.</strong><br>
+            Я помогаю масштабировать бизнес и кратно увеличиваю выручку салонов красоты и бьюти-мастеров через настройку рекламы в соцсетях: Instagram, Facebook, TikTok и YouTube.
+        </p>
+        
         <div class="stats-grid">
             <div class="stat-item">
                 <h3>8+</h3>
@@ -295,8 +112,8 @@
                 <p>реализованных стратегий</p>
             </div>
             <div class="stat-item">
-                <h3>Кратное</h3>
-                <p>увеличение выручки клиентов</p>
+                <h3>300%+</h3>
+                <p>ROMI (возврат инвестиций)<br><span style="text-transform: none; font-size: 11px; color: #888;">увеличение выручки клиентов в 3-4 раза</span></p>
             </div>
         </div>
 
@@ -304,66 +121,60 @@
         <ul class="services-list">
             <li>
                 <strong>Таргетированная реклама</strong>
-                Настройка и запуск рекламы под ключ в Meta Ads
+                Настройка и запуск рекламы под ключ в соцсетях.
             </li>
             <li>
-                <strong>Аудит и Упаковка</strong>
-                Глубокий анализ ваших площадок и поиск точек роста
+                <strong>Глубокий аудит</strong>
+                Глубокий анализ ваших площадок и поиск точек роста.
             </li>
             <li>
                 <strong>Консультация и Стратегия</strong>
-                Разбор текущей ситуации и разработка системы привлечения
+                Разбор текущей ситуации и разработка системы привлечения.
             </li>
         </ul>
         <a href="prices.html" class="btn" onclick="fbq('track', 'Lead');">Прайс-лист на услуги</a>
     </section>
 
     <!-- ИЗБРАННЫЕ КЕЙСЫ -->
-    <section>
+    <section style="padding-top: 0;">
         <h2>Избранные Кейсы</h2>
-        <p style="color: #555; margin-bottom: 40px; font-size: 15px;">Реальный опыт запуска рекламы для локальных и международных бьюти-проектов.</p>
         
         <a href="case1.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
-            <div class="case-geo">🇺🇸 США</div>
-            <div class="case-title">Продвижение новой парикмахерской в США: как я привлекла 78 клиентов и $15 450 выручки</div>
+            <div class="case-geo">🇺🇸 Ниша: Парикмахерская (США)</div>
+            <div class="case-title">Продвижение нового салона с нуля</div>
+            <div class="case-desc"><strong>Результат:</strong> 78 новых клиентов и $15 450 выручки.</div>
         </a>
 
         <a href="case2.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
-            <div class="case-geo">🇺🇸 Иллинойс, США</div>
-            <div class="case-title">Как я вывела новый салон красоты в Иллинойс в плюс: 794 обращения, 160 новых клиентов за 2,5 месяца</div>
+            <div class="case-geo">🇺🇸 Ниша: Салон красоты (Иллинойс, США)</div>
+            <div class="case-title">Вывод бизнеса в стабильный плюс</div>
+            <div class="case-desc"><strong>Результат:</strong> 160 новых клиентов за 2,5 месяца работы.</div>
         </a>
 
         <a href="case3.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
-            <div class="case-geo">🇮🇱 Израиль</div>
-            <div class="case-title">740 заявок на ручной массаж по 5,7 ₪ ($1.8) и 30 762 ₪ ($9 946) чистой прибыли для мастера с нуля в Израиле</div>
+            <div class="case-geo">🇮🇱 Ниша: Ручной массаж (Израиль)</div>
+            <div class="case-title">Полная запись без клиентской базы</div>
+            <div class="case-desc"><strong>Результат:</strong> 740 заявок и $9 946 чистой прибыли для мастера.</div>
         </a>
 
-        <br>
-        <a href="cases.html" class="btn" onclick="fbq('track', 'ViewContent');">Смотреть все кейсы</a>
-    </section>
-
-    <!-- СЕТКА INSTAGRAM (Место под виджет) -->
-    <section>
-        <h2>Instagram</h2>
-        <div class="insta-grid">
-            <div class="insta-placeholder">Photo</div>
-            <div class="insta-placeholder">Photo</div>
-            <div class="insta-placeholder">Photo</div>
-            <div class="insta-placeholder">Photo</div>
-            <div class="insta-placeholder">Photo</div>
-            <div class="insta-placeholder">Photo</div>
-        </div>
-    </section>
-
-    <!-- КОНТАКТЫ И ФУТЕР -->
-    <section style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 60px; padding-bottom: 60px;">
-        <h2>Связаться со мной</h2>
+        <a href="cases.html" class="btn" onclick="fbq('track', 'ViewContent');" style="margin-bottom: 30px;">Смотреть все кейсы</a>
+        
+        <!-- КНОПКИ СВЯЗИ ПОСЛЕ КЕЙСОВ -->
+        <h3 style="font-size: 16px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Связаться со мной:</h3>
         <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
         <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
-        <a href="https://instagram.com/your_instagram" class="btn" onclick="fbq('track', 'Contact');">Instagram</a>
-        <a href="https://facebook.com/your_facebook" class="btn" onclick="fbq('track', 'Contact');">Facebook</a>
-        
-        <br><br>
+    </section>
+
+    <!-- ФУТЕР -->
+    <section style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 40px; padding-bottom: 40px;">
+        <!-- 5 КРУГЛЫХ КНОПОК СОЦСЕТЕЙ -->
+        <div class="social-links">
+            <a href="https://instagram.com/your_instagram" class="social-btn" onclick="fbq('track', 'Contact');">IG</a>
+            <a href="https://facebook.com/your_facebook" class="social-btn" onclick="fbq('track', 'Contact');">FB</a>
+            <a href="#" class="social-btn" onclick="fbq('track', 'Contact');">YT</a>
+            <a href="https://tiktok.com/@your_tiktok" class="social-btn" onclick="fbq('track', 'Contact');">TT</a>
+            <a href="https://threads.net/@your_threads" class="social-btn" onclick="fbq('track', 'Contact');">TH</a>
+        </div>
         <a href="privacy.html" class="footer-link" onclick="fbq('track', 'ViewContent');">Политика конфиденциальности</a>
     </section>
 
