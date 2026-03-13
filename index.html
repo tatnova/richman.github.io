@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADSNEW — Системный таргетинг и стратегия</title>
+    <title>Татьяна Новикова — Таргетолог для бьюти-ниши</title>
 
-    <!-- Подключение премиальных шрифтов: Serif (Playfair Display) и Sans-Serif (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Подключение премиальных шрифтов: Playfair Display и Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -29,7 +29,7 @@
     <style>
         /* Базовые настройки стиля Quiet Luxury */
         body {
-            background-color: #F5F5F2; /* Светлый серо-бежевый фон */
+            background-color: #F5F5F2;
             color: #1a1a1a;
             font-family: 'Inter', sans-serif;
             font-weight: 300;
@@ -39,26 +39,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Много свободного пространства (White Space) */
-        section {
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* Типографика: Заголовки с засечками */
+        /* ТИПОГРАФИКА: Заголовки с засечками */
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 400;
             margin: 0;
             color: #000;
-        }
-
-        h1 {
-            font-size: 36px;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
         }
 
         h2 {
@@ -67,14 +53,69 @@
             letter-spacing: 0.5px;
         }
 
-        p.subtitle {
+        /* --- ПЕРВЫЙ ЭКРАН (ФОТО НА ВЕСЬ ЭКРАН) --- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            
+            /* Ваше фото из GitHub */
+            background-image: url('140.jpg'); 
+            
+            background-size: cover;
+            background-position: center top;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Полупрозрачная бежевая вуаль для читаемости текста на фоне фото */
+        .hero-overlay {
+            background: rgba(245, 245, 242, 0.85);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .hero-desc {
             font-size: 16px;
-            color: #555;
-            letter-spacing: 0.5px;
+            color: #444;
             margin-bottom: 40px;
         }
 
-        /* Строгие кнопки: прямоугольные, острые углы, черная рамка */
+        /* Базовые секции */
+        section {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* СТРОГИЕ КНОПКИ */
         .btn {
             display: inline-block;
             background: transparent;
@@ -97,15 +138,16 @@
             color: #F5F5F2;
         }
 
-        /* Блок цифр */
+        /* БЛОК ЦИФР */
         .stats-grid {
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            margin-top: 60px;
             border-top: 1px solid rgba(0,0,0,0.1);
             border-bottom: 1px solid rgba(0,0,0,0.1);
             padding: 40px 0;
+            margin-top: -20px;
+            margin-bottom: 40px;
         }
 
         .stat-item h3 {
@@ -121,7 +163,7 @@
             margin: 0;
         }
 
-        /* Блок услуг */
+        /* БЛОК УСЛУГ */
         .services-list {
             list-style: none;
             padding: 0;
@@ -134,9 +176,9 @@
 
         .services-list li {
             font-size: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         .services-list strong {
@@ -148,7 +190,35 @@
             color: #000;
         }
 
-        /* Сетка Instagram (заглушки) */
+        /* ОФОРМЛЕНИЕ КЕЙСОВ */
+        .case-link-block {
+            display: block;
+            text-align: left;
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+        .case-link-block:hover {
+            background-color: rgba(0,0,0,0.03);
+            border-color: #000;
+        }
+        .case-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .case-geo {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* СЕТКА INSTAGRAM */
         .insta-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -157,7 +227,7 @@
         }
 
         .insta-placeholder {
-            aspect-ratio: 1; /* Делает блоки идеально квадратными */
+            aspect-ratio: 1;
             background-color: rgba(0,0,0,0.03);
             border: 1px solid rgba(0,0,0,0.08);
             display: flex;
@@ -169,16 +239,24 @@
             letter-spacing: 1px;
         }
 
-        /* Адаптивность для мобильных устройств */
+        .footer-link {
+            color: #777;
+            font-size: 12px;
+            text-decoration: underline;
+            margin-top: 40px;
+            display: inline-block;
+        }
+
+        /* АДАПТИВНОСТЬ */
         @media (max-width: 600px) {
-            h1 { font-size: 28px; }
+            .hero-content h1 { font-size: 32px; }
             h2 { font-size: 24px; }
             .stats-grid { 
                 flex-direction: column; 
                 gap: 40px; 
             }
             .insta-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
+                grid-template-columns: repeat(2, 1fr);
             }
             .btn {
                 display: block;
@@ -186,68 +264,87 @@
                 box-sizing: border-box;
                 margin: 10px 0;
             }
+            section { padding: 60px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header и главное предложение -->
-    <header>
-        <section>
-            <h1>ADSNEW — Системный таргетинг и стратегия</h1>
-            <p class="subtitle">Масштабирование бизнеса через эффективную закупку трафика</p>
+    <!-- ПЕРВЫЙ ЭКРАН (Фото на фоне) -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Новикова Татьяна</h1>
+            <div class="hero-subtitle">Таргетолог для бьюти-ниши</div>
+            <p class="hero-desc">Системный таргетинг и стратегия. Помогаю привлекать клиентов и кратно увеличивать выручку салонов красоты и бьюти-мастеров через рекламу в Instagram и Facebook.</p>
             
-            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">Связаться со мной</a>
-            
-            <!-- Блок цифр -->
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>8+</h3>
-                    <p>лет опыта в маркетинге</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100+</h3>
-                    <p>реализованных стратегий</p>
-                </div>
-                <div class="stat-item">
-                    <h3>7-8</h3>
-                    <p>значные обороты клиентов</p>
-                </div>
-            </div>
-        </section>
+            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">Написать в WhatsApp</a>
+            <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Написать в Telegram</a>
+        </div>
     </header>
 
-    <!-- Услуги -->
+    <!-- БЛОК ЦИФР И УСЛУГИ -->
     <section>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>8+</h3>
+                <p>лет опыта в маркетинге</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>реализованных стратегий</p>
+            </div>
+            <div class="stat-item">
+                <h3>Кратное</h3>
+                <p>увеличение выручки клиентов</p>
+            </div>
+        </div>
+
         <h2>Услуги и Экспертиза</h2>
         <ul class="services-list">
             <li>
-                <strong>Targeted Advertising</strong>
-                ведение под ключ
+                <strong>Таргетированная реклама</strong>
+                Настройка и запуск рекламы под ключ в Meta Ads
             </li>
             <li>
-                <strong>Ads Audit</strong>
-                анализ и поиск точек роста
+                <strong>Аудит и Упаковка</strong>
+                Глубокий анализ ваших площадок и поиск точек роста
             </li>
             <li>
-                <strong>Media Strategy</strong>
-                воронки продаж
+                <strong>Консультация и Стратегия</strong>
+                Разбор текущей ситуации и разработка системы привлечения
             </li>
         </ul>
-        <a href="prices.html" class="btn" onclick="fbq('track', 'Lead');">Price List</a>
+        <a href="prices.html" class="btn" onclick="fbq('track', 'Lead');">Прайс-лист на услуги</a>
     </section>
 
-    <!-- Кейсы -->
+    <!-- ИЗБРАННЫЕ КЕЙСЫ -->
     <section>
         <h2>Избранные Кейсы</h2>
-        <p class="subtitle">Реальные результаты запуска рекламы на локальных и международных рынках</p>
-        <a href="cases.html" class="btn" onclick="fbq('track', 'ViewContent');">Смотреть кейсы</a>
+        <p style="color: #555; margin-bottom: 40px; font-size: 15px;">Реальный опыт запуска рекламы для локальных и международных бьюти-проектов.</p>
+        
+        <a href="case1.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+            <div class="case-geo">🇺🇸 США</div>
+            <div class="case-title">Продвижение новой парикмахерской в США: как я привлекла 78 клиентов и $15 450 выручки</div>
+        </a>
+
+        <a href="case2.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+            <div class="case-geo">🇺🇸 Иллинойс, США</div>
+            <div class="case-title">Как я вывела новый салон красоты в Иллинойс в плюс: 794 обращения, 160 новых клиентов за 2,5 месяца</div>
+        </a>
+
+        <a href="case3.html" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+            <div class="case-geo">🇮🇱 Израиль</div>
+            <div class="case-title">740 заявок на ручной массаж по 5,7 ₪ ($1.8) и 30 762 ₪ ($9 946) чистой прибыли для мастера с нуля в Израиле</div>
+        </a>
+
+        <br>
+        <a href="cases.html" class="btn" onclick="fbq('track', 'ViewContent');">Смотреть все кейсы</a>
     </section>
 
-    <!-- Instagram Feed (Место под виджет) -->
+    <!-- СЕТКА INSTAGRAM (Место под виджет) -->
     <section>
-        <h2>Latest from Instagram</h2>
-        <!-- Когда вы сделаете виджет на Elfsight, вы удалите этот <div class="insta-grid">...</div> и вставите код виджета сюда -->
+        <h2>Instagram</h2>
         <div class="insta-grid">
             <div class="insta-placeholder">Photo</div>
             <div class="insta-placeholder">Photo</div>
@@ -258,12 +355,16 @@
         </div>
     </section>
 
-    <!-- Контакты -->
+    <!-- КОНТАКТЫ И ФУТЕР -->
     <section style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 60px; padding-bottom: 60px;">
-        <h2>Контакты</h2>
+        <h2>Связаться со мной</h2>
         <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
         <a href="https://t.me/your_telegram" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
         <a href="https://instagram.com/your_instagram" class="btn" onclick="fbq('track', 'Contact');">Instagram</a>
+        <a href="https://facebook.com/your_facebook" class="btn" onclick="fbq('track', 'Contact');">Facebook</a>
+        
+        <br><br>
+        <a href="privacy.html" class="footer-link" onclick="fbq('track', 'ViewContent');">Политика конфиденциальности</a>
     </section>
 
 </body>
