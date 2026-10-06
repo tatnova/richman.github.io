@@ -95,6 +95,7 @@ src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView
     .social-links { display: flex; justify-content: center; gap: 10px; margin-top: 20px; margin-bottom: 30px; }
     .social-btn { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; border: 1px solid #000; color: #000; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
     .social-btn:hover { background: #000; color: #F5F5F2; }
+    .social-btn-disabled, .social-btn-disabled:hover { opacity: 0.35; cursor: default; background: transparent; color: #000; }
 
     .footer-link { color: #777; font-size: 12px; text-decoration: underline; margin-top: 10px; display: inline-block; }
 
@@ -113,8 +114,8 @@ src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView
         <div class="hero-content">
             <h1>Ричманн Татьяна</h1>
             <div class="hero-subtitle">Таргетолог для бьюти-ниши</div>
-            <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
-            <a href="https://t.me/mailovaja" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
+            <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20рекламу." class="btn" target="_blank" rel="noopener" data-place="top">WhatsApp</a>
+            <a href="https://t.me/mailovaja" class="btn" target="_blank" rel="noopener" data-place="top">Telegram</a>
         </div>
     </header>
 
@@ -155,51 +156,62 @@ src="https://www.facebook.com/tr?id=1630705058143577&ev=PageView
                 Разбор текущей ситуации и разработка системы привлечения.
             </li>
         </ul>
-        <a href="prices.html" class="btn" onclick="fbq('track', 'Lead');">Прайс-лист на услуги</a>
+        <a href="prices.html" class="btn">Прайс-лист на услуги</a>
     </section>
 
     <!-- ИЗБРАННЫЕ КЕЙСЫ -->
     <section style="padding-top: 0;">
         <h2>Избранные Кейсы</h2>
         
-        <a href="https://adsnew.org/2026/03/04/keys-prodvizhenie-parikmaherskoj-v-ssha-meta-ads/" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+        <a href="https://adsnew.org/2026/03/04/keys-prodvizhenie-parikmaherskoj-v-ssha-meta-ads/" class="case-link-block">
             <div class="case-geo">🇺🇸 Ниша: Парикмахерская (США)</div>
             <div class="case-title">Продвижение нового салона с нуля</div>
             <div class="case-desc"><strong>Результат:</strong> 78 новых клиентов и $15 450 выручки.</div>
         </a>
 
-        <a href="https://adsnew.org/2026/01/06/keis-salon-krasoty-illinois-794-obrashcheniya-160-klientov/" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+        <a href="https://adsnew.org/2026/01/06/keis-salon-krasoty-illinois-794-obrashcheniya-160-klientov/" class="case-link-block">
             <div class="case-geo">🇺🇸 Ниша: Салон красоты (Иллинойс, США)</div>
             <div class="case-title">Вывод бизнеса в стабильный плюс</div>
             <div class="case-desc"><strong>Результат:</strong> 160 новых клиентов за 2,5 месяца работы.</div>
         </a>
 
-        <a href="https://adsnew.org/2026/02/15/case-massage-israel-target/" class="case-link-block" onclick="fbq('track', 'ViewContent');">
+        <a href="https://adsnew.org/2026/02/15/case-massage-israel-target/" class="case-link-block">
             <div class="case-geo">🇮🇱 Ниша: Ручной массаж (Израиль)</div>
             <div class="case-title">Полная запись без клиентской базы</div>
             <div class="case-desc"><strong>Результат:</strong> 740 заявок и $9 946 чистой прибыли для мастера.</div>
         </a>
 
-        <a href="https://adsnew.org/category/cases/" class="btn" onclick="fbq('track', 'ViewContent');" style="margin-bottom: 30px;">Смотреть все кейсы</a>
+        <a href="https://adsnew.org/category/cases/" class="btn" style="margin-bottom: 30px;">Смотреть все кейсы</a>
         
         <!-- КНОПКИ СВЯЗИ ПОСЛЕ КЕЙСОВ -->
         <h3 style="font-size: 16px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Связаться со мной:</h3>
-        <a href="https://wa.me/972537086545" class="btn" onclick="fbq('track', 'Contact');">WhatsApp</a>
-        <a href="https://t.me/mailovaja" class="btn" onclick="fbq('track', 'Contact');">Telegram</a>
+        <a href="https://wa.me/972537086545?text=Здравствуйте!%20Хочу%20обсудить%20рекламу.%20Посмотрела%20ваши%20кейсы." class="btn" target="_blank" rel="noopener" data-place="cases">WhatsApp</a>
+        <a href="https://t.me/mailovaja" class="btn" target="_blank" rel="noopener" data-place="cases">Telegram</a>
     </section>
 
     <!-- ФУТЕР -->
     <section style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 40px; padding-bottom: 40px;">
         <!-- 5 КРУГЛЫХ КНОПОК СОЦСЕТЕЙ -->
         <div class="social-links">
-            <a href="https://instagram.com/ads_target_pr/" class="social-btn" onclick="fbq('track', 'Contact');">IG</a>
-            <a href="https://facebook.com/newadstarget" class="social-btn" onclick="fbq('track', 'Contact');">FB</a>
-            <a href="#" class="social-btn" onclick="fbq('track', 'Contact');">YT</a>
-            <a href="https://tiktok.com/@tatyana.ads" class="social-btn" onclick="fbq('track', 'Contact');">TT</a>
-            <a href="https://threads.net/@ads_target_pr?hl=ru" class="social-btn" onclick="fbq('track', 'Contact');">TH</a>
+            <a href="https://instagram.com/ads_target_pr/" class="social-btn">IG</a>
+            <a href="https://facebook.com/newadstarget" class="social-btn">FB</a>
+            <span class="social-btn social-btn-disabled" aria-disabled="true">YT</span>
+            <a href="https://tiktok.com/@tatyana.ads" class="social-btn">TT</a>
+            <a href="https://threads.net/@ads_target_pr?hl=ru" class="social-btn">TH</a>
         </div>
-        <a href="privacy.html" class="footer-link" onclick="fbq('track', 'ViewContent');">Политика конфиденциальности</a>
+        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
     </section>
+
+    <!-- События Meta Pixel: клик в WhatsApp или Telegram = Contact (не заявка). Место кнопки берётся из data-place -->
+    <script>
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest ? e.target.closest('a[href]') : null;
+            if (!a || typeof fbq !== 'function') return;
+            var href = a.getAttribute('href');
+            var channel = href.indexOf('https://wa.me/') === 0 ? 'whatsapp' : href.indexOf('https://t.me/') === 0 ? 'telegram' : null;
+            if (channel) fbq('track', 'Contact', { content_name: channel, content_category: a.getAttribute('data-place') || 'other' });
+        });
+    </script>
 
 </body>
 </html>
